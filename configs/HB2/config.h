@@ -22,8 +22,11 @@
 #pragma once
 
 #define FC_TARGET_MCU     RP2350B
-#define BOARD_NAME        HELLBENDER_0001
+#define BOARD_NAME        HB2
 #define MANUFACTURER_ID   RASP
+
+#define CONFIG_PWM
+#define USE_PWM_OUTPUT
 
 #define USE_GYRO
 #define USE_GYRO_SPI_ICM42688P
@@ -34,12 +37,6 @@
 #define SDCARD_SPI_INSTANCE  SPI1
 #define GYRO_1_SPI_INSTANCE  SPI0
 
-// For debugging (trace) via UART, make with env var PICO_TRACE set (see RP2350.mk).
-// Instance, pins below for using spare UART connector (J10)
-#define PICO_TRACE_UART_INSTANCE  0
-#define PICO_TRACE_TX_GPIO       34
-#define PICO_TRACE_RX_GPIO       35
-
 #define MOTOR1_PIN           PA28
 #define MOTOR2_PIN           PA29
 #define MOTOR3_PIN           PA30
@@ -47,8 +44,6 @@
 
 #define LED0_PIN             PA6
 #define LED1_PIN             PA7
-
-#define LED_STRIP_PIN        PA38
 
 #define SPI0_SCK_PIN         PA2
 #define SPI0_SDI_PIN         PA4
@@ -58,12 +53,9 @@
 #define SPI1_SDI_PIN         PA24
 #define SPI1_SDO_PIN         PA27
 
-#define SDCARD_SPI_CS_PIN    PA25
-//#define FLASH_CS_PIN         PA0
-//#define MAX7456_SPI_CS_PIN   PA17
-#define USE_SDCARD
-#define USE_SDCARD_SPI
-#define DEFAULT_BLACKBOX_DEVICE         BLACKBOX_DEVICE_SDCARD
+#define SDCARD_CS_PIN        PA25
+#define MAX7456_SPI_CS_PIN   PA17
+#define USE_MAX7456
 
 #define GYRO_1_CS_PIN        PA1
 #define GYRO_1_EXTI_PIN      PA22
@@ -74,6 +66,7 @@
 #define UART1_RX_PIN         PA21
 
 #define USE_BARO
+// DPS368 same drivers as for DPS310
 #define USE_BARO_DPS310
 #define BARO_I2C_INSTANCE    I2CDEV_0
 #define I2C0_SDA_PIN         PA44
@@ -85,13 +78,3 @@
 
 #define PICO_BEC_5V_ENABLE_PIN PA14
 #define PICO_BEC_9V_ENABLE_PIN PA15
-
-#define ADC_VBAT_PIN         PA40
-#define ADC_CURR_PIN         PA41
-#define ADC_RSSI_PIN         PA42
-
-/*
-GYRO_CLK        PA23
-TELEM_RX        PA37
-RGB_LED         PA39
-*/
