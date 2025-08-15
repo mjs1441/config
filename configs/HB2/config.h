@@ -31,7 +31,6 @@
 // override motor_pwm_rate setting
 #define MOTOR_FC_PWM_RATE 16384
 
-
 #define USE_GYRO
 #define USE_GYRO_SPI_ICM42688P
 #define USE_ACC
@@ -40,6 +39,10 @@
 #define MAX7456_SPI_INSTANCE SPI1
 #define SDCARD_SPI_INSTANCE  SPI1
 #define GYRO_1_SPI_INSTANCE  SPI0
+
+#define PICO_TRACE_UART_INSTANCE  1
+#define PICO_TRACE_TX_GPIO        8
+#define PICO_TRACE_RX_GPIO        9
 
 // beware PWM on PA28..PA31 same slice as PA12..PA15
 #define MOTOR1_PIN           PA28

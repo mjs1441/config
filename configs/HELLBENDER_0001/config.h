@@ -70,6 +70,7 @@
 
 #define GYRO_2_CS_PIN        NONE
 
+// Radio RX on UART1
 #define UART1_TX_PIN         PA20
 #define UART1_RX_PIN         PA21
 
