@@ -88,6 +88,16 @@
 #define PICO_BEC_5V_ENABLE_PIN PA14
 #define PICO_BEC_9V_ENABLE_PIN PA15
 
+// provisional: using PICO with MCT8329A (so need to set registers etc.)
+#define PICO_ESC_MCT8329A
+#define MCT8329A_MUX_I2C_INDEX    0
+#define MCT8329A_MUX_RESET_GPIO  11
+#define MCT8329A_MUX_ADDR      0x70
+#define MCT8329A_MCT_ADDR      0x60
+
+// Enable CLI interface
+/////#define USE_MCT8329A_REGS
+
 // MCT8329A regs
 #define MCT8329A_ISD_CONFIG 0x7F404D04
 #define MCT8329A_MOTOR_STARTUP1 0x6C9265B7
@@ -131,5 +141,3 @@
 // #define MCT8329A_SYS_STATUS2 0x60010000
 // #define MCT8329A_SYS_STATUS3 0x00000000
 
-// Enable CLI interface
-#define USE_MCT8329A_REGS
