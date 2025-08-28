@@ -118,7 +118,14 @@
 #define MCT8329A_REF_PROFILES4            0x000C9932
 #define MCT8329A_REF_PROFILES5            0x1F6BF200
 #define MCT8329A_REF_PROFILES6            0x00708000
-#define MCT8329A_PIN_CONFIG1              0x20600004
+
+// bits 2-1 SPD_CTRL_MODE, 0 = analog, 1 = pwm, 2 = i2c, 3 = freq
+// This selects i2c mode
+// #define MCT8329A_PIN_CONFIG1              0x20600004
+
+// This selects pwm mode
+#define MCT8329A_PIN_CONFIG1              0x20600002
+
 #define MCT8329A_PIN_CONFIG2              0x3E0020AA
 #define MCT8329A_DEVICE_CONFIG            0x27100008
 #define MCT8329A_GD_CONFIG1               0x000600FC
