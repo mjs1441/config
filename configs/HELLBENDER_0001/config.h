@@ -74,6 +74,15 @@
 #define UART1_TX_PIN         PA20
 #define UART1_RX_PIN         PA21
 
+#define uart2test
+#ifdef uart2test
+#define UART2_TX_PIN         PA20
+#define UART2_RX_PIN         PA21
+#undef UART1_TX_PIN
+#undef UART1_RX_PIN
+#endif
+
+
 #define USE_BARO
 #define USE_BARO_DPS310
 #define BARO_I2C_INSTANCE    I2CDEV_0
