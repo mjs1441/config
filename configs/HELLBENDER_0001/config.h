@@ -74,10 +74,17 @@
 #define UART1_TX_PIN         PA20
 #define UART1_RX_PIN         PA21
 
-#define uart2test
+//#define uart3test
+
 #ifdef uart2test
 #define UART2_TX_PIN         PA20
 #define UART2_RX_PIN         PA21
+#undef UART1_TX_PIN
+#undef UART1_RX_PIN
+#endif
+#ifdef uart3test
+#define UART3_TX_PIN         PA20
+#define UART3_RX_PIN         PA21
 #undef UART1_TX_PIN
 #undef UART1_RX_PIN
 #endif
