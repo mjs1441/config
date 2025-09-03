@@ -40,10 +40,6 @@
 #define SDCARD_SPI_INSTANCE  SPI1
 #define GYRO_1_SPI_INSTANCE  SPI0
 
-#define PICO_TRACE_UART_INSTANCE  1
-#define PICO_TRACE_TX_GPIO        8
-#define PICO_TRACE_RX_GPIO        9
-
 // beware PWM on PA28..PA31 same slice as PA12..PA15
 #define MOTOR1_PIN           PA28
 #define MOTOR2_PIN           PA29
@@ -52,6 +48,8 @@
 
 #define LED0_PIN             PA6
 #define LED1_PIN             PA7
+
+#define LED_STRIP_PIN        PA39
 
 #define SPI0_SCK_PIN         PA2
 #define SPI0_SDI_PIN         PA4
@@ -70,8 +68,18 @@
 
 #define GYRO_2_CS_PIN        NONE
 
-#define UART1_TX_PIN         PA20
-#define UART1_RX_PIN         PA21
+// trace on 8,9 (J2 GPS)
+// don't define in BF
+// #define UART1_TX_PIN         PA8
+// #define UART1_RX_PIN         PA9
+
+// put Radio RX (J1 FTRX) on to PIO UART2 (prototype) to free up UART1 for trace
+#define UART2_TX_PIN         PA20
+#define UART2_RX_PIN         PA21
+
+#define PICO_TRACE_UART_INSTANCE  1
+#define PICO_TRACE_TX_GPIO        8
+#define PICO_TRACE_RX_GPIO        9
 
 #define USE_BARO
 // DPS368 same drivers as for DPS310
