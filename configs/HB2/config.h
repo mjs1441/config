@@ -103,6 +103,9 @@
 #define MCT8329A_MUX_RESET_GPIO  11
 #define MCT8329A_MUX_ADDR      0x70
 #define MCT8329A_MCT_ADDR      0x60
+#define MCT8329A_MOTOR_FAULT_GPIO 10
+
+
 
 // Enable CLI interface
 /////#define USE_MCT8329A_REGS
