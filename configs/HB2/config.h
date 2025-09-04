@@ -30,7 +30,8 @@
 #define EXCLUDE_DSHOT
 
 // override motor_pwm_rate setting
-#define MOTOR_FC_PWM_RATE 16384
+//#define MOTOR_FC_PWM_RATE 16384
+#define MOTOR_FC_PWM_RATE 4096
 
 #define USE_GYRO
 #define USE_GYRO_SPI_ICM42688P
