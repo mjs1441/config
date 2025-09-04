@@ -27,6 +27,7 @@
 
 #define CONFIG_PWM
 #define USE_PWM_OUTPUT
+#define EXCLUDE_DSHOT
 
 // override motor_pwm_rate setting
 #define MOTOR_FC_PWM_RATE 16384
