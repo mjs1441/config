@@ -48,7 +48,22 @@
 #define LED0_PIN             PA6
 #define LED1_PIN             PA7
 
+// use pio 2 for LED STRIP or for OSD
+#ifdef PIO_FOR_LED_STRIP
 #define LED_STRIP_PIN        PA38
+
+#elif defined LAUREL2
+// OSD_EN_PIN must be next GPIO up from OSD_W_PIN
+#define OSD_W_PIN            PA16
+#define OSD_EN_PIN           PA17
+#define OSD_SYNC_PIN         PA18
+
+#else
+// GPIO_SPARE1,2 on GPIO32, 33, on J11 (6-pin, middle pins 3, 4)
+#define OSD_W_PIN            PA32
+#define OSD_EN_PIN           PA33
+// #define OSD_SYNC_PIN
+#endif
 
 #define SPI0_SCK_PIN         PA2
 #define SPI0_SDI_PIN         PA4
