@@ -54,6 +54,7 @@
 
 #elif defined LAUREL2
 // OSD_EN_PIN must be next GPIO up from OSD_W_PIN
+// might insist on OSD_SYNC_PIN next up from OSD_EN_PIN
 #define OSD_W_PIN            PA16
 #define OSD_EN_PIN           PA17
 #define OSD_SYNC_PIN         PA18
