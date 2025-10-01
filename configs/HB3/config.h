@@ -22,7 +22,7 @@
 #pragma once
 
 #define FC_TARGET_MCU     RP2350B
-#define BOARD_NAME        HELLBENDER_0001
+#define BOARD_NAME        HB3
 #define MANUFACTURER_ID   RASP
 
 #define USE_GYRO
@@ -49,21 +49,16 @@
 #define LED1_PIN             PA7
 
 // use pio 2 for LED STRIP or for OSD
+
 #ifdef PIO_FOR_LED_STRIP
 #define LED_STRIP_PIN        PA38
 
-#elif 0 // defined LAUREL2
+#else
 // OSD_EN_PIN must be next GPIO up from OSD_W_PIN
 // might insist on OSD_SYNC_PIN next up from OSD_EN_PIN
 #define OSD_W_PIN            PA16
 #define OSD_EN_PIN           PA17
 #define OSD_SYNC_PIN         PA18
-
-#else
-// GPIO_SPARE1,2 on GPIO32, 33, on J11 (6-pin, middle pins 3, 4)
-#define OSD_W_PIN            PA32
-#define OSD_EN_PIN           PA33
-// #define OSD_SYNC_PIN
 #endif
 
 #define SPI0_SCK_PIN         PA2
