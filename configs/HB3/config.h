@@ -35,10 +35,11 @@
 #define GYRO_1_SPI_INSTANCE  SPI0
 
 // For debugging (trace) via UART, make with env var PICO_TRACE set (see RP2350.mk).
-// Instance, pins below for using spare UART connector (J10)
-#define PICO_TRACE_UART_INSTANCE  0
-#define PICO_TRACE_TX_GPIO       34
-#define PICO_TRACE_RX_GPIO       35
+// Instance, pins below for using
+// uart1 via GPS connector (J9)
+#define PICO_TRACE_UART_INSTANCE  1
+#define PICO_TRACE_TX_GPIO       8
+#define PICO_TRACE_RX_GPIO       9
 
 #define MOTOR1_PIN           PA28
 #define MOTOR2_PIN           PA29
