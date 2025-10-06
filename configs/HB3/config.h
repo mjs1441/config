@@ -60,6 +60,8 @@
 #define OSD_W_PIN            PA16
 #define OSD_EN_PIN           PA17
 #define OSD_SYNC_PIN         PA18
+
+#define TEST_PIO_OSD
 #endif
 
 #define SPI0_SCK_PIN         PA2
