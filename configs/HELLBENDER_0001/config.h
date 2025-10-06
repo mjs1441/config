@@ -34,11 +34,18 @@
 #define SDCARD_SPI_INSTANCE  SPI1
 #define GYRO_1_SPI_INSTANCE  SPI0
 
+#define tempdebug
 // For debugging (trace) via UART, make with env var PICO_TRACE set (see RP2350.mk).
 // Instance, pins below for using spare UART connector (J10)
+#ifdef tempdebug
+#define PICO_TRACE_UART_INSTANCE  1
+#define PICO_TRACE_TX_GPIO       38
+#define PICO_TRACE_RX_GPIO       18
+#else
 #define PICO_TRACE_UART_INSTANCE  0
 #define PICO_TRACE_TX_GPIO       34
 #define PICO_TRACE_RX_GPIO       35
+#endif
 
 #define MOTOR1_PIN           PA28
 #define MOTOR2_PIN           PA29
@@ -74,11 +81,23 @@
 #define SPI1_SDI_PIN         PA24
 #define SPI1_SDO_PIN         PA27
 
+#define yesOSD
+//#define yesSD
+
+#ifdef yesOSD
+#define USE_MAX7456
+// USE_OSD_SD automatic unless you have USE_OSD_HD
+#define MAX7456_SPI_CS_PIN   PA17
+#endif
+
+#ifdef yesSD
 #define SDCARD_SPI_CS_PIN    PA25
 //#define FLASH_CS_PIN         PA0
-//#define MAX7456_SPI_CS_PIN   PA17
+#endif
+
 #define USE_SDCARD
 #define USE_SDCARD_SPI
+
 #define DEFAULT_BLACKBOX_DEVICE         BLACKBOX_DEVICE_SDCARD
 
 #define GYRO_1_CS_PIN        PA1
