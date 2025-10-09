@@ -82,15 +82,18 @@
 #define SPI1_SDO_PIN         PA27
 
 #define yesOSD
-//#define yesSD
+#define yesSD
+//#define SPI_NO_DMA
+
+#define USE_MAX7456
 
 #ifdef yesOSD
-#define USE_MAX7456
 // USE_OSD_SD automatic unless you have USE_OSD_HD
 #define MAX7456_SPI_CS_PIN   PA17
 #endif
 
 #ifdef yesSD
+
 #define SDCARD_SPI_CS_PIN    PA25
 //#define FLASH_CS_PIN         PA0
 #endif
