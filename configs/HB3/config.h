@@ -64,6 +64,11 @@
 #define OSD_SYNC_PIN         PA18
 
 #define TEST_PIO_OSD
+#define USE_FB_OSD
+
+#define OSD_FRAMERATE_MAX_HZ 350
+#define OSD_FRAMERATE_DEFAULT_HZ 130
+
 
 // pretend for now
 #define USE_MAX7456
