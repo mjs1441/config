@@ -25,6 +25,8 @@
 #define BOARD_NAME        HB3
 #define MANUFACTURER_ID   RASP
 
+#define DEFAULT_BEEPER_NOT_RX_LOST
+
 #define USE_GYRO
 #define USE_GYRO_SPI_ICM42688P
 #define USE_ACC
@@ -62,6 +64,15 @@
 #define OSD_SYNC_PIN         PA18
 
 #define TEST_PIO_OSD
+#define USE_FB_OSD
+
+#define OSD_FRAMERATE_MAX_HZ 350
+#define OSD_FRAMERATE_DEFAULT_HZ 130
+
+
+// pretend for now
+#define USE_MAX7456
+#define USE_OSD_SD
 #endif
 
 #define SPI0_SCK_PIN         PA2
@@ -72,12 +83,15 @@
 #define SPI1_SDI_PIN         PA24
 #define SPI1_SDO_PIN         PA27
 
+#define USE_SDCARD
+#if 0
 #define SDCARD_SPI_CS_PIN    PA25
 //#define FLASH_CS_PIN         PA0
 //#define MAX7456_SPI_CS_PIN   PA17
 #define USE_SDCARD
 #define USE_SDCARD_SPI
 #define DEFAULT_BLACKBOX_DEVICE         BLACKBOX_DEVICE_SDCARD
+#endif
 
 #define GYRO_1_CS_PIN        PA1
 #define GYRO_1_EXTI_PIN      PA22
@@ -89,6 +103,7 @@
 #define UART1_RX_PIN         PA21
 
 #define USE_BARO
+// DPS368 same drivers as for DPS310
 #define USE_BARO_DPS310
 #define BARO_I2C_INSTANCE    I2CDEV_0
 #define I2C0_SDA_PIN         PA44
