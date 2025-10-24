@@ -70,8 +70,9 @@
 #define OSD_FRAMERATE_DEFAULT_HZ 130
 
 
-// pretend for now
-#define USE_MAX7456
+// don't need this now
+// #define USE_MAX7456
+
 #define USE_OSD_SD
 #endif
 
