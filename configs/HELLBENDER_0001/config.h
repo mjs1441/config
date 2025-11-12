@@ -25,6 +25,19 @@
 #define BOARD_NAME        HELLBENDER_0001
 #define MANUFACTURER_ID   RASP
 
+#define tempdebug
+ // For debugging (trace) via UART, make with env var PICO_TRACE set (see RP2350.mk).
+ // Instance, pins below for using spare UART connector (J10)
+#ifdef tempdebug
+#define PICO_TRACE_UART_INSTANCE  1
+#define PICO_TRACE_TX_GPIO       38
+#define PICO_TRACE_RX_GPIO       18
+#else
+#define PICO_TRACE_UART_INSTANCE  0
+#define PICO_TRACE_TX_GPIO       34
+#define PICO_TRACE_RX_GPIO       35
+#endif
+
 #define USE_GYRO
 #define USE_GYRO_SPI_ICM42688P
 #define USE_ACC
