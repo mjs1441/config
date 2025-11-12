@@ -72,7 +72,7 @@
 // Enable QUADSPI on RP2350 (pins are fixed via QMI; platform code handles them)
 #define USE_QUADSPI
 #define USE_QUADSPI_DEVICE_1
-#define FLASH_QUADSPI_INSTANCE	  1
+#define FLASH_QUADSPI_INSTANCE	   ((QUADSPI_TypeDef *)0x1)
 
 // MAX7456 and SD card cannot be used at the same time
 #ifdef USE_MAX7456
