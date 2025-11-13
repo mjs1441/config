@@ -78,8 +78,15 @@
 #ifdef USE_MAX7456
 #define USE_FLASH
 #define FLASH_CS_PIN         PA0
+
+#if 0
+#define USE_FLASHFS
+#define USE_FLASH_CHIP
+#define USE_FLASH_M25P16
+#else
 #define USE_FLASH_CHIP
 #define USE_FLASH_W25Q128FV
+#endif
 
 #define DEFAULT_BLACKBOX_DEVICE         BLACKBOX_DEVICE_FLASH
 #else
