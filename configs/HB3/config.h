@@ -100,8 +100,14 @@
 #define GYRO_2_CS_PIN        NONE
 
 // Radio RX on UART1
+#if 1
 #define UART1_TX_PIN         PA20
 #define UART1_RX_PIN         PA21
+#else
+// todo possible testing
+#define PIOUART0_TX_PIN      PA20
+#define PIOUART0_RX_PIN      PA21
+#endif
 
 #define USE_BARO
 // DPS368 same drivers as for DPS310
