@@ -25,7 +25,8 @@
 #define BOARD_NAME        HB3
 #define MANUFACTURER_ID   RASP
 
-#define DEFAULT_BEEPER_NOT_RX_LOST
+//BEEPER_OFF_FLAGS 2 = BEEPER_RX_LOST
+#define DEFAULT_BEEPER_OFF_FLAGS 2
 
 #define USE_GYRO
 #define USE_GYRO_SPI_ICM42688P
@@ -54,26 +55,24 @@
 // use pio 2 for LED STRIP or for OSD
 
 #ifdef PIO_FOR_LED_STRIP
+
 #define LED_STRIP_PIN        PA38
 
 #else
+
+#define USE_OSD_SD
+
 // OSD_EN_PIN must be next GPIO up from OSD_W_PIN
 // might insist on OSD_SYNC_PIN next up from OSD_EN_PIN
 #define OSD_W_PIN            PA16
 #define OSD_EN_PIN           PA17
 #define OSD_SYNC_PIN         PA18
 
-#define TEST_PIO_OSD
 #define USE_FB_OSD
 
-#define OSD_FRAMERATE_MAX_HZ 350
-#define OSD_FRAMERATE_DEFAULT_HZ 130
+#define OSD_FRAMERATE_MAX_HZ 500
+#define OSD_FRAMERATE_DEFAULT_HZ 250
 
-
-// don't need this now
-// #define USE_MAX7456
-
-#define USE_OSD_SD
 #endif
 
 #define SPI0_SCK_PIN         PA2
