@@ -21,6 +21,7 @@
 
 #pragma once
 
+#define OSD_STICKS_TEST
 #define FC_TARGET_MCU     RP2350B
 #define BOARD_NAME        HB3
 #define MANUFACTURER_ID   RASP
@@ -63,7 +64,7 @@
 #define USE_OSD_SD
 
 // OSD_EN_PIN must be next GPIO up from OSD_W_PIN
-// might insist on OSD_SYNC_PIN next up from OSD_EN_PIN
+// and OSD_SYNC_PIN next up from OSD_EN_PIN
 #define OSD_W_PIN            PA16
 #define OSD_EN_PIN           PA17
 #define OSD_SYNC_PIN         PA18
