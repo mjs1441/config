@@ -44,12 +44,10 @@
 // uart0 via LED connector (J2)
 #define PICO_TRACE_UART_INSTANCE  0
 #define PICO_TRACE_TX_GPIO       2 // J2 (LED connector) 3 of 3
-#define PICO_TRACE_RX_GPIO       4 // not connected
 #else
 // uart1 via Radio "UART2" connector (J3)
 #define PICO_TRACE_UART_INSTANCE  1
 #define PICO_TRACE_TX_GPIO       42
-#define PICO_TRACE_RX_GPIO       4 // not connected
 #endif
 #endif
 

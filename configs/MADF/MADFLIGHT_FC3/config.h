@@ -31,7 +31,6 @@
 // Example instance and pins below.
 //#define PICO_TRACE_UART_INSTANCE  0
 //#define PICO_TRACE_TX_GPIO        20
-//#define PICO_TRACE_RX_GPIO        21
 
 //------------------
 // Internal Pins
@@ -164,7 +163,6 @@
 
 // Debugging (trace) via UART
 //PA20 used as PICO_TRACE_TX_GPIO
-//PA21 used as PICO_TRACE_RX_GPIO
 //+5V
 //GND
 

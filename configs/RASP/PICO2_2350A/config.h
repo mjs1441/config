@@ -31,7 +31,6 @@
 // Example instance and pins below.
 #define PICO_TRACE_UART_INSTANCE  0
 #define PICO_TRACE_TX_GPIO        0
-#define PICO_TRACE_RX_GPIO        1
 
 // Example GPIO pins for testing motor output
 #define MOTOR1_PIN           PA10
